@@ -1,0 +1,98 @@
+:root{
+  --teal:#4f9292;
+  --teal-dark:#315f61;
+  --lime:#e6ff68;
+  --lime-soft:#e8f29a;
+  --ink:#243536;
+  --paper:#f3f0e9;
+  --white:#ffffff;
+  --salmon:#d98e72;
+  --line:rgba(36,53,54,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit}
+img{max-width:100%;display:block}
+.site-header{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:14px clamp(18px,4vw,64px);background:rgba(79,146,146,.96);color:white;backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.18)}
+.brand{text-decoration:none;font-family:Georgia,serif;font-size:1.1rem;white-space:nowrap}
+.brand span{opacity:.78}
+.nav{display:flex;justify-content:flex-end;gap:18px;align-items:center;font-size:.88rem}
+.nav a{text-decoration:none;opacity:.92}
+.nav a:hover{opacity:1;text-decoration:underline}
+.nav-cta{background:var(--salmon);padding:8px 13px;border-radius:999px}
+.language-switcher{display:flex;gap:6px}
+.language-switcher button{border:1px solid rgba(255,255,255,.45);background:transparent;color:white;border-radius:999px;padding:6px 8px;font-size:.72rem;cursor:pointer}
+.language-switcher button.active{background:white;color:var(--teal-dark)}
+.hero{min-height:72vh;display:flex;align-items:center;padding:clamp(60px,8vw,120px) clamp(20px,7vw,120px);background:
+radial-gradient(circle at 75% 20%,rgba(230,255,104,.46),transparent 30%),
+linear-gradient(135deg,#f7f4ee 0%,#e9ede8 58%,#dbe6df 100%)}
+.hero-inner{width:min(1150px,100%);margin:auto;display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:clamp(36px,7vw,90px);align-items:center}
+.portrait-wrap{position:relative}
+.portrait-wrap:before{content:"";position:absolute;inset:-18px 24px 24px -18px;background:var(--lime);border-radius:46% 54% 48% 52%/52% 46% 54% 48%;transform:rotate(-4deg)}
+.portrait{position:relative;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 25px 60px rgba(36,53,54,.18)}
+.eyebrow,.section-kicker{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:700;color:var(--teal-dark)}
+.hero h1,.section h2{font-family:Georgia, "Times New Roman", serif;font-weight:500;line-height:1.04}
+.hero h1{font-size:clamp(2.65rem,6vw,5.4rem);margin:.25em 0}
+.hero h1 span{font-size:.52em;color:var(--teal-dark)}
+.hero-lede{font-size:clamp(1.08rem,2vw,1.35rem);max-width:720px}
+.hero-actions,.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.button{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 18px;font-weight:700;font-size:.92rem;transition:.2s ease}
+.button:hover{transform:translateY(-1px)}
+.primary{background:var(--salmon);color:white}
+.secondary{border:1px solid var(--teal-dark);color:var(--teal-dark);background:transparent}
+.dark{background:var(--ink);color:white}
+.section{padding:clamp(70px,9vw,130px) clamp(20px,7vw,120px)}
+.section-soft{background:#f8f6f1}
+.two-col{width:min(1120px,100%);margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,100px)}
+.section h2{font-size:clamp(2.1rem,4vw,4rem);margin:.2em 0}
+.prose{font-size:1.04rem}
+.prose p:first-child{margin-top:0}
+.section-dark{background:linear-gradient(rgba(49,95,97,.96),rgba(49,95,97,.96)),url("images/treatment-room.jpg") center/cover fixed;color:white}
+.training-grid{width:min(1120px,100%);margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:32px}
+.training-card,.techniques-card{padding:clamp(28px,5vw,55px);border-radius:26px}
+.training-card{background:var(--lime-soft);color:var(--ink)}
+.techniques-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(8px)}
+.section-dark .techniques-card .section-kicker{color:#d9ffff}
+.credential{border-top:1px solid var(--line);padding:18px 0}
+.credential h3{margin:0 0 4px;font-family:Georgia,serif;font-size:1.2rem}
+.credential p{margin:0;opacity:.8}
+.tech-list{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.tech-list li:before{content:"•";color:var(--lime);margin-right:10px}
+.section-heading{width:min(1120px,100%);margin:0 auto 34px}
+.reviews-grid{width:min(1120px,100%);margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+blockquote{margin:0;background:white;padding:28px;border-radius:18px;box-shadow:0 14px 35px rgba(36,53,54,.08);display:flex;flex-direction:column;justify-content:space-between;min-height:280px}
+blockquote p{font-family:Georgia,serif;font-size:1.05rem}
+blockquote cite{font-style:normal;font-size:.8rem;color:var(--teal-dark)}
+.section-lime{background:var(--lime)}
+.practical-grid{width:min(1120px,100%);margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,7vw,90px);align-items:center}
+.practical-copy dl{margin:30px 0;display:grid;gap:16px}
+.practical-copy dl div{display:grid;grid-template-columns:110px 1fr;border-top:1px solid rgba(36,53,54,.25);padding-top:12px}
+dt{font-weight:800}
+dd{margin:0}
+.room-card{margin:0;background:white;padding:12px;border-radius:22px;box-shadow:0 18px 45px rgba(36,53,54,.14)}
+.room-card img{border-radius:14px;aspect-ratio:4/3;object-fit:cover}
+.room-card figcaption{padding:10px 8px 4px;font-size:.84rem;color:#566}
+.contact-section{background:var(--paper)}
+.contact-panel{width:min(940px,100%);margin:auto;text-align:center;padding:clamp(30px,6vw,70px);border:1px solid var(--line);border-radius:32px;background:white}
+.contact-panel h2{max-width:780px;margin:.25em auto}
+.contact-panel p{max-width:700px;margin-left:auto;margin-right:auto}
+.contact-actions{justify-content:center}
+footer{display:grid;grid-template-columns:1fr 1fr auto;gap:22px;padding:32px clamp(20px,7vw,120px);background:var(--teal);color:white;font-size:.86rem}
+footer a{color:white}
+@media (max-width:980px){
+  .site-header{grid-template-columns:1fr auto}.nav{display:none}.brand{white-space:normal}
+  .hero-inner,.two-col,.training-grid,.practical-grid{grid-template-columns:1fr}
+  .portrait-wrap{max-width:310px}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .tech-list{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .site-header{padding:12px 16px}.brand span{display:none}
+  .hero{padding-top:52px}.hero-inner{gap:34px}
+  .hero h1{font-size:2.65rem}
+  .reviews-grid{grid-template-columns:1fr}
+  blockquote{min-height:auto}
+  .practical-copy dl div{grid-template-columns:1fr;gap:4px}
+  footer{grid-template-columns:1fr}
+}
